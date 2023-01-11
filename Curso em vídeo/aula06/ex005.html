@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background-color: rgb(133, 176, 255);
+            color: white;
+            font: normal 18pt Arial,sans-serif;
+        }
+input {
+    margin: 20px;
+    padding: 10px;
+}
+
+    </style>
+</head>
+<body>
+    <h1>Iniciando com o <strong>DOM</strong></h1>
+    <p>Aqui vai o resultado do <strong>DOM</strong> em JS</p>
+    <div id="msg">Clique em mim</div>
+    <input type="button" value="Clique aqui" onclick="executar()"><br>
+    <script>
+        var p1 = document.getElementsByTagName('p')[0]
+        window.document.write('Está escrito assim: ' + p1.innerText)  /* Escreve o texto de p1 */
+        p1.style.color = 'yellow' /* muda a cor de p1 */
+
+/*var d = document.getElementsByTagName('p')[0] document.body.p */
+
+        var a1 = document.querySelector('div.msg')
+        a1.style.background = 'black'
+
+        function executar() {
+            var b1 = document.querySelector('div#msg');
+            b1.innerText = 'Mudei o texto por clique';
+        }
+
+    </script>
+</body>
+</html>
