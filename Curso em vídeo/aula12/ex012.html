@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horário</title>
+</head>
+<body>
+    <h1>Cumprimentando</h1>
+    <input type="number" name="hora" id="hora">
+    <input type="button" value="Enviar" onclick="calcular()">
+    <div id="saida"></div>
+
+    <script>
+        function calcular() {
+            var agora = new Date()
+            var horalocal = agora.getHours()
+/*             var hr = document.querySelector(horalocal) */
+            var saida = document.querySelector('div#saida')
+            var hour = horalocal
+            if (hour == 1) {
+                saida.innerHTML = `Bom dia! É exatamente ${hour} hora da manhã.`
+            } else if (hour > 1 && hour < 12) {
+                saida.innerHTML = `Bom dia! São ${hour} horas.`
+            } else if (hour == 0) {
+                saida.innerHTML = 'Boa noite. São 0 horas.'
+            } else if (hour < 18) {
+                saida.innerHTML = `Boa tarde! São exatamente ${hour} horas.`
+
+            } else
+                saida.innerHTML = `Boa noite! São ${hour} horas.`
+        }
+        
+    </script>
+</body>
+</html>
