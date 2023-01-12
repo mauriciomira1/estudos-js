@@ -16,13 +16,13 @@ verde escuro #ABC798
 
 body, html {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-image: linear-gradient(#FFC4EB, #ABC798);
+    background-image: linear-gradient(#858585, #ABC798);
     height: 100vh;
     width: 100vw;
 }
 
-section {
-    background-color: white;
+.main {
+    background-color: rgb(234, 255, 239);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -41,7 +41,7 @@ h1 {
     text-transform: uppercase;
     font-size: 2em;
     color: #638b47;
-    text-shadow: 1px 2px 2px #4e70369f;
+    text-shadow: 1px 2px 2px #4e703650;
 }
 
 #container {
@@ -53,63 +53,36 @@ h1 {
     transform: translate(-50%, -50%);
 }
 
-.campo {
-    text-align: center;
-    margin: 10px 0;
+div#container > input {
+    display: block;
+    padding: 3px;
+    margin: 2px;
+    border: 1px solid #4f6e3a;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.199);
+}
+
+#contar {
+    display: block;
+    margin-top: 15px;
     text-align: center;
     background-color: #ABC798;
-    border-radius: 20px;
-    padding: 6px;
+    border-radius: 2px;
 }
 
-.campo:hover {
-    background-color: #c1dbb0;
-    transition: 0.2s;
-}
-
-input#ano {
-    padding: 6px 0;
-    border-radius: 15px;
-    border: #ABC798;
-    width: 268px;
-}
-
-#labelfem {
-    margin-left: 5px;
-
-}
-
-#labelmasc {
-    margin-left: 5px;
-    margin-right: 20px;
-}
-
-input#verificar {
-    background-color: white;
-    border-radius: 15px;
-    padding: 6px 30px;
-    border: 2px solid #ABC798;
-    display: inline-block;
-    color: #638b47;
-}
-
-input#verificar:hover {
-    background-color: #ABC798;
+#contar:hover {
+    background-color: #4f6e3a;
+    transition: 0.1s;
     color: white;
-    transition: 0.2s;
 }
 
 .resultado {
-display: inline;
+display: block;
+text-align: center;
+margin: 10px 0;
+padding: 20px;
+border: 2px solid #4f6e3a;
+border-radius: 5px;
+background-color: white;
+box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.199);
 }
 
-img {
-    width: 170px;
-    position: relative;
-    left: 50%;
-    bottom: 7%;
-    transform: translateX(-50%);
-    border-radius: 50%;
-    border: 2px solid #ABC798;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.274);
-}

@@ -1,44 +1,25 @@
 function calcular() {
-    var data = new Date()
-    var agora = data.getFullYear()
-    var year = document.querySelector('input#ano')
-    var rsex = document.getElementsByName('sexo')
-    var result = document.getElementById('txt')
-    var idade = agora - Number(year.value)
-    var genero = ''
-    var pict = document.createElement('img')
-    pict.setAttribute('id','foto')
+    var start = document.getElementById('inicio')
+    var end = document.getElementById('fim')
+    var passo = document.getElementById('passo')
+    var res = document.getElementById('txt')
+    var result = document.getElementById('result')
+    result.innerHTML = ''
 
-    if (year.value >= agora || year.value.length == 0 || year.value == 0) {
-        window.alert('[ERRO!] Informe um valor válido')
+    if (passo.value == 0) {
+        window.alert('Valor de passo inválido. Favor inserir número maior que zero.')
+        result.innerHTML = 'O resultado vai aparecer aqui'
     } else {
-    
-        if (rsex[0].checked) {
-            genero = 'Homem'
-            
-            if (idade < 20) {
-                pict.setAttribute('src','img/homem_jovem.png')
-            } else if (idade >= 20 && idade < 50) {
-                pict.setAttribute('src','img/homem_adulto.png')
-            } else 
-                pict.setAttribute('src','img/homem_idoso.png')
-        } else if (rsex[1].checked ) {
-        genero = 'Mulher'
         
-        if (idade < 20) {
-            pict.setAttribute('src','img/mulher_jovem.png')
-        } else if (idade >= 20 && idade < 50) {
-            pict.setAttribute('src','img/mulher_adulta.png')
-        } else 
-        pict.setAttribute('src','img/mulher_idosa.png')
+        var s = Number(start.value)
+        var e = Number(end.value)
+        var p = Number(passo.value)
+
+        for(var a1 = s ; a1 <= e ; a1 += p) {
+            var ediv = document.createElement('div')
+            ediv.setAttribute('id',`res${a1}`)
+            result.appendChild(ediv)
+            ediv.innerHTML = `${a1}` 
         }
-        result.innerHTML = `Detectamos ${genero} com ${idade} anos.`
-        result.appendChild(pict)
     }
-
-
-/*     var sexo = document.querySelector
-    var text = document.querySelector('div#txt')
-    var imgem = document.querySelector('img#foto')
- */
 }
