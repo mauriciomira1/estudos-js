@@ -1,0 +1,103 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+}
+
+main {
+    background-color: lightblue;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    min-height: 290px;
+    width: 200px;
+    border: 3px solid rgb(42, 151, 151);
+    border-radius: 12px;
+    box-shadow: 0px 0px 14px rgba(0, 26, 48, 0.336);
+    text-align: center;
+}
+
+div#areabotoes {
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    text-align: center;
+}
+
+div#visor {
+    width: 170px;
+    background-color: rgb(206, 206, 206);
+    padding: 3px;
+    border: 2px solid black;
+    left: 50%;
+    transform: translate(-50%);
+    position: absolute;
+    border-radius: 5px;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.178);
+    overflow-wrap: break-word;
+}
+
+main > h1 {
+    font-size: 1.6em;
+    margin-bottom: 5px;
+}
+
+div#visor p {
+    margin: 3px;
+    width: 98%;
+    text-align: right;
+}
+
+div.botao {
+    display: inline-block;
+    padding: 3px;
+}
+
+input {
+    padding: 10px;
+    margin: 3px;
+    border-radius: 5px;
+    border-color: rgb(42, 151, 151);
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.178);
+    background-color: rgb(250, 250, 250);
+}
+
+input:hover {
+    background-color: rgb(195, 231, 231);
+    transition: 0.1s;
+    cursor: pointer;
+}
+
+input#n0 {
+    width: 60%;
+    margin-left: 2px;
+}
+
+div#numeros {
+    margin-top: 34px;
+}
+
+div#simbolos > input {
+    display: block;
+    margin-top: 6px;
+}
+
+input#clean {
+    display: block;
+    background-color: rgb(28, 127, 167);
+    color: white;
+    margin-bottom: -16px;
+}
+
+input#clean:hover {
+    background-color: rgb(223, 240, 243);
+    color: rgb(0, 0, 0);
+}
