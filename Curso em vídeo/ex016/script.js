@@ -2,7 +2,6 @@ function calcular() {
     var start = document.getElementById('inicio')
     var end = document.getElementById('fim')
     var passo = document.getElementById('passo')
-    var res = document.getElementById('txt')
     var result = document.getElementById('result')
     result.innerHTML = ''
 

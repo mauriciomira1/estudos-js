@@ -9,7 +9,7 @@ function calcular() {
     var pict = document.createElement('img')
     pict.setAttribute('id','foto')
 
-    if (year.value >= agora || year.value.length == 0 || year.value == 0) {
+    if (year.value >= agora || year.value.length == 0 || year.value <= 0) {
         window.alert('[ERRO!] Informe um valor válido')
     } else {
     
